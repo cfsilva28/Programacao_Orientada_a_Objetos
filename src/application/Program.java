@@ -14,7 +14,7 @@ public class Program {
 		product.price = Double.parseDouble(JOptionPane.showInputDialog("Price"));
 		product.quantity = Integer.parseInt(JOptionPane.showInputDialog("Quantity In Stock"));
 
-		System.out.println(product.name + ", " + product.price + ", " + product.quantity);
+		System.out.println(product);	
 
 	}
 
