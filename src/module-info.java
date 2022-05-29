@@ -1,3 +1,3 @@
-module course02 {
+module course03 {
 	requires java.desktop;
 }

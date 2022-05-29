@@ -2,23 +2,23 @@ package application;
 
 import javax.swing.JOptionPane;
 
-import entities.Rectangle;
+import entities.Employee;
 
 public class Program {
 
 	public static void main(String[] args) {
 
-		Rectangle rect = new Rectangle();
+		Employee empl = new Employee();
 
-		rect.width = Double.parseDouble(JOptionPane.showInputDialog("Enter rectangle width"));
-		rect.height = Double.parseDouble(JOptionPane.showInputDialog("Enter rectangle height"));
-		
-		System.out.println("AREA = "+rect.area());
-		System.out.println("PERIMETER = "+rect.perimeter());
-		System.out.println("DIAGONAL = "+rect.diagonal());
-		
-		
-		
+		empl.name = JOptionPane.showInputDialog("Entre com o nome do Funcionário");
+		empl.grossSalary = Double.parseDouble(JOptionPane.showInputDialog("Entre com o salário bruto do Funcionário"));
+		empl.tax = Double.parseDouble(JOptionPane.showInputDialog("Entre com a porcentagem de imposto"));
+
+		System.out.println("Employee" + empl);
+
+		empl.increaseSalary(Double.parseDouble(JOptionPane.showInputDialog("Which percentage to increase salary?")));
+
+		System.out.println("Update data: " + empl);
 
 	}
 
