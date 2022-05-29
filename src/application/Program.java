@@ -1,41 +1,21 @@
 package application;
 
-import java.util.Locale;
-
 import javax.swing.JOptionPane;
 
-import entities.Triangle;
+import entities.Product;
 
 public class Program {
 
-	// Solução do problema com orientação a objetos
 	public static void main(String[] args) {
-		Locale.setDefault(Locale.US);
-		Triangle x, y;
-		x = new Triangle();
-		y = new Triangle();
-		System.out.println("Enter the measures of triangle X: ");
 
-		x.a = Double.parseDouble(JOptionPane.showInputDialog("xA"));
-		x.b = Double.parseDouble(JOptionPane.showInputDialog("xB"));
-		x.c = Double.parseDouble(JOptionPane.showInputDialog("xC"));
+		Product product = new Product();
+		System.out.println("Enter Product data: ");
+		product.name = JOptionPane.showInputDialog("Name");
+		product.price = Double.parseDouble(JOptionPane.showInputDialog("Price"));
+		product.quantity = Integer.parseInt(JOptionPane.showInputDialog("Quantity In Stock"));
 
-		System.out.println("Enter the measures of triangle Y: ");
+		System.out.println(product.name + ", " + product.price + ", " + product.quantity);
 
-		y.a = Double.parseDouble(JOptionPane.showInputDialog("yA"));
-		y.b = Double.parseDouble(JOptionPane.showInputDialog("yA"));
-		y.c = Double.parseDouble(JOptionPane.showInputDialog("yA"));
-
-		double areaX = x.area();
-		double areaY = y.area();
-
-		System.out.printf("Triangle X area: %.4f%n", areaX);
-		System.out.printf("Triangle Y area: %.4f%n", areaY);
-
-		if (areaX > areaY) {
-			System.out.println("Larger area: X");
-		} else {
-			System.out.println("Larger area: Y");
-		}
 	}
+
 }
